@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkatBowlingOpgave", "SkatBowlingOpgave\SkatBowlingOpgave.csproj", "{7F8DCE69-573D-4A51-9873-D3F923817C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkatBowlingOpgave.Tests", "SkatBowlingOpgave.Tests\SkatBowlingOpgave.Tests.csproj", "{FE2BDA67-9951-4DF3-9472-E12DA52F1261}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F8DCE69-573D-4A51-9873-D3F923817C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8DCE69-573D-4A51-9873-D3F923817C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8DCE69-573D-4A51-9873-D3F923817C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8DCE69-573D-4A51-9873-D3F923817C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2BDA67-9951-4DF3-9472-E12DA52F1261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2BDA67-9951-4DF3-9472-E12DA52F1261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2BDA67-9951-4DF3-9472-E12DA52F1261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2BDA67-9951-4DF3-9472-E12DA52F1261}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
