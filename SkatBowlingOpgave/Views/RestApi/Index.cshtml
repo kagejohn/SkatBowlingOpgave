@@ -1,0 +1,32 @@
+﻿@model SkatBowlingOpgave.DataModels.PointResultater
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+    <tr>
+        <th>Første kuggle</th>
+        <th>Anden kuggle</th>
+        <th>Total points</th>
+    </tr>
+    @for (int i = 0; i < Model.pointResultater.Length; i++)
+    {
+        <tr>
+            <td>
+                @Model.points[i][0]
+            </td>
+            <td>
+                @Model.points[i][1]
+            </td>
+            <td>
+                @Model.pointResultater[i]
+            </td>
+            @if (i == Model.pointResultater.Length - 1)
+            {
+                <td>
+                    @Model.success
+                </td>
+            }
+        </tr>
+    }
+</table>
