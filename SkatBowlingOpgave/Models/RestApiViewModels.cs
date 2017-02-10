@@ -11,11 +11,27 @@ namespace SkatBowlingOpgave.Models
     public class RestApiViewModels
     {
         private RestApiConsume restApiConsume = new RestApiConsume();
+        /// <summary>
+        /// Denne list indeholder en liste af de summerede resultater
+        /// </summary>
         private List<int> pointResultater = new List<int>();
+        /// <summary>
+        /// Denne list indeholder en boolean der indikere om runden var en strike
+        /// </summary>
         private List<bool> strike = new List<bool>();
+        /// <summary>
+        /// Denne list indeholder en boolean der indikere om runden var en spare
+        /// </summary>
         private List<bool> spare = new List<bool>();
+        /// <summary>
+        /// Denne string indeholder den nuværende token
+        /// </summary>
         private string token = "";
 
+        /// <summary>
+        /// Denne metode behandler arrayet af resultater den modtager fra REST API'en
+        /// </summary>
+        /// <returns>Denne metode returnere en liste af de resultater den modtager fra REST API'en, de summerede resultater og om de blev uploadet korrekt til REST API'en</returns>
         public async Task<PointResultater> Bowlingpoints()
         {
             var points = await restApiConsume.GetPointsAsync();
@@ -81,6 +97,12 @@ namespace SkatBowlingOpgave.Models
             return resultater;
         }
 
+        /// <summary>
+        /// Denne metode tilføjer points fra de næste 2 kugler til resultatet fra den sidste runde hvis sidste runde var en strike
+        /// </summary>
+        /// <param name="i">Det nuværende index</param>
+        /// <param name="firstPoint">Den næste kugle</param>
+        /// <param name="secondPoint">Den anden næste kugle</param>
         private void Strike(int i, int firstPoint, int secondPoint)
         {
             if (i >= 1)
@@ -93,6 +115,11 @@ namespace SkatBowlingOpgave.Models
             }
         }
 
+        /// <summary>
+        /// Denne metode tilføjer points fra den næste kugle til resultatet fra den sidste runde hvis sidste runde var en spare
+        /// </summary>
+        /// <param name="i">Det nuværende index</param>
+        /// <param name="firstPoint">Den næste kugle</param>
         private void Spare(int i, int firstPoint)
         {
             if (i >= 1)

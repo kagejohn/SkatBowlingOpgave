@@ -9,6 +9,9 @@ namespace SkatBowlingOpgave.DataModels
     {
         public int[][] points { get; set; }
         public int[] pointResultater { get; set; }
+        /// <summary>
+        /// Denne property bliver sat baseret på om POST kaldet kommer tilbage med successe eller ej
+        /// </summary>
         public string success { get; set; }
     }
 }
